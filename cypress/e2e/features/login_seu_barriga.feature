@@ -13,7 +13,7 @@ Feature: Login
         Examples:
         | username            | password       | message                      |
         |                     |    12345       | Email é um campo obrigatório |
-        | itlins@yopmail.com  |                | Senha é um campo obrigatório |
+        | ed1234@gmail.com    |                | Senha é um campo obrigatório |
 
     Scenario Outline: 004/005/006 - Login (Invalid) Invalid credentials
         Given the SeuBarriga login page is loaded
@@ -21,5 +21,5 @@ Feature: Login
         Then the system shows a "<message>" informing the error
         Examples:
         | username            | password          | message  |
-        | itlins@yopmail.com  | 123456!           | Problema |
-        | itlins@yopmail.co   | 12345             | Problema |
+        | ed1234@gmail.com    | 123456!           | Problema |
+        | ed1234@gmail.com    | 12345             | Problema |
