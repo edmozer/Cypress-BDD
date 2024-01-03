@@ -3,12 +3,12 @@ export default {
           cy.visit("https://seubarriga.wcaquino.me/login");
         },
       
-        getEmail(email) {
+        setEmail(email) {
     
           return cy.get('#email').type(email);
         },
       
-        getPassword(password) {
+        setPassword(password) {
           
           return cy.get('#senha').type(password);
         },

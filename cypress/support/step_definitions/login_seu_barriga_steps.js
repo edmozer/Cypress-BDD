@@ -6,8 +6,8 @@ Given("the sign in page is loaded", () =>{
 })
 
 When("the credentials {string} and {string} and the login button is clicked", (email, password) =>{
-    login_seu_barriga_page.getEmail(email)
-    login_seu_barriga_page.getPassword(password)
+    login_seu_barriga_page.setEmail(email)
+    login_seu_barriga_page.setPassword(password)
     login_seu_barriga_page.clickLoginButton()
 })
 
@@ -21,11 +21,11 @@ Given("the SeuBarriga login page is loaded", () => {
 
 When("the user leaves either {string} and-or {string} empty and tries to login", (username, password) => {
     if (username !== "") {
-        login_seu_barriga_page.getEmail(username);
+        login_seu_barriga_page.setEmail(username);
     }
 
     if (password !== "") {
-        login_seu_barriga_page.getPassword(password);
+        login_seu_barriga_page.setPassword(password);
     }
 
     login_seu_barriga_page.clickLoginButton();
@@ -37,11 +37,11 @@ Then("the system shows a {string} that says the fields that are mandatory", (mes
 
 When("the user inserts an invalid {string} and~or {string} and clicks on login", (username, password) => {
     if (username !== "") {
-        login_seu_barriga_page.getEmail(username);
+        login_seu_barriga_page.setEmail(username);
     }
 
     if (password !== "") {
-        login_seu_barriga_page.getPassword(password);
+        login_seu_barriga_page.setPassword(password);
     }
 
     login_seu_barriga_page.clickLoginButton();
