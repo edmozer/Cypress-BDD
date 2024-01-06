@@ -23,3 +23,8 @@ Feature: Login
         | username            | password          | message  |
         | ed1234@gmail.com    | 123456!           | Problema |
         | ed1234@gmail.com    | 12345             | Problema |
+
+    Scenario Outline: Rate limit - Unsuccessful tries
+        Given the SeuBarriga login page is loaded
+        When the user inserts a valid email "ed1234@gmail.com" and an invalid password "1234" and clicks on login 3 times
+        Then the system blocks the account

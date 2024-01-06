@@ -50,3 +50,18 @@ When("the user inserts an invalid {string} and~or {string} and clicks on login",
 Then("the system shows a {string} informing the error", (message) => {
     login_seu_barriga_page.getAlertMessage(message);
  });
+When("the user inserts a valid email {string} and an invalid password {string} and clicks on login 3 times", (email, password) =>{
+    login_seu_barriga_page.setEmail(email)
+    login_seu_barriga_page.setPassword(password)
+    login_seu_barriga_page.clickLoginButton()
+    login_seu_barriga_page.setEmail(email)
+    login_seu_barriga_page.setPassword(password)
+    login_seu_barriga_page.clickLoginButton()
+    login_seu_barriga_page.setEmail(email)
+    login_seu_barriga_page.setPassword(password)
+    login_seu_barriga_page.clickLoginButton()
+}) 
+
+Then("the system blocks the account", () => {
+    login_seu_barriga_page.getAlertMessage("The account has been temporarily disabled");
+ });
