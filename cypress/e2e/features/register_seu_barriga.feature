@@ -26,3 +26,27 @@ Feature: Register
         |   Abcdefghijklmnopqrstuvwxyz  |  ed@gmail.com |  test123  | O nome deve conter menos que 20 caracteres |
         |   ed/@      |   ed@gmail.com  |  test123  | O nome não pode conter caracteres especiais |
         |   ed1       |   ed@gmail.com  |  test123  | O nome não pode conter números |    
+
+    Scenario Outline: Invalid email entries 
+        Given the register page is loaded
+        When the user inserts a valid "<name>", a invalid "<email>", a valid "<password>" and clicks on register
+        Then the system should show a "<message>" informing the error   
+        Examples:
+        |   name   |             email                       | password |        message         |
+        |    ed    |   e@e.e                                 | test123  | Insira um email válido |
+        |    ed    |   123456789012345678901234567890@oi.net | test123  | Insira um email válido |
+        |    ed    |   !#$%&@gmail.com                       | test123  | Insira um email válido |
+        |    ed    |   12345@12335.123                       | test123  | Insira um email válido |
+
+    Scenario Outline: Invalid password entries 
+        Given the register page is loaded
+        When the user inserts a valid "<name>", a valid "<email>", an invalid "<password>" and clicks on register
+        Then the system should show a "<message>" informing the error   
+        Examples:
+        |   name   |    email    | password                           |        message         |
+        |    ed    |   @ed.com   | t                                  | A senha não corresponde aos requisitos |
+        |    ed    |   @ed.com   | test12345678910111213141516171819  | A senha não corresponde aos requisitos |
+        |    ed    |   @ed.com   | test123                            | A senha não corresponde aos requisitos |
+        |    ed    |   @ed.com   | TEST123                            | A senha não corresponde aos requisitos |
+        |    ed    |   @ed.com   | 1234567                            | A senha não corresponde aos requisitos |
+        |    ed    |   @ed.com   | !@#$%^&*                           | A senha não corresponde aos requisitos |

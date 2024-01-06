@@ -8,12 +8,12 @@ export default {
       return cy.get('#nome').type(name);
     },
 
-    setEmail(email) {
-        const randomString = Math.random().toString(36).substring(7); 
+    setRandomEmail(email) {
+        const randomString = Math.random().toString(36).substring(8); 
         const randomEmail = `${randomString}${email}`; 
         return cy.get('#email').type(randomEmail);
     },
-    setEmail2(email) {
+    setEmail(email) {
       return cy.get('#email').type(email);
   },
 
