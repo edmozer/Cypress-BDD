@@ -3,7 +3,7 @@ Feature: Login
     Scenario: Login com sucesso
     Given the SeuBarriga login page is loaded
     When  the credentials "ed1234@gmail.com" and "abc123" and the login button is clicked
-    Then the system will show a success message saying "Bem vindo"
+    Then the system will show a success message saying "Bem vindo, ed123!"
 
 
     Scenario Outline: 002/003 - Login (Empty) - Fields are Required
