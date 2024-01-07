@@ -1,38 +1,34 @@
-export default {
-    accessRegisterPage() {
-      cy.visit("https://seubarriga.wcaquino.me/cadastro");
-    },
-  
-    setName(name) {
-      if (name) {
-      return cy.get('#nome').type(name);
-      }
-    },
+/// <reference types="cypress" />
+let el = require('../elements/registerElements').REGISTER
+const { set, click, get_text } = require('../actions.js');
 
-    setRandomEmail(email) {
-      if (email) {
-        const randomString = Math.random().toString(36).substring(8); 
-        const randomEmail = `${randomString}${email}`; 
-        return cy.get('#email').type(randomEmail);
-      }
-    },
-    setEmail(email) {
-      if (email) {
-      return cy.get('#email').type(email);
-      }
-  },
 
-    setPassword(password) {
-      if (password) {
-      return cy.get('#senha').type(password);
-      }
-    },
+class Register {
 
-    clickRegisterButton() {
-        cy.get('.btn').click();
-    },
+  accessRegisterPage() {
+    cy.visit(el.urlRegister);
+  }
 
-    getAlertMessage(message) {
-        cy.get('.alert').contains(message);
-    }
+  setName(name) {
+    name && set(el.fieldName, name);
+  }
+
+  setEmail(email) {
+    email && set(el.fieldEmail, email);
+  }
+
+  setPassword(password) {
+    password && set(el.fieldPassword, password);
+  }
+
+  clickRegisterButton() {
+    click(el.btnRegister);
+  }
+
+  getAlertMessage() {
+    return cy.get(el.alertMessage)
+  }
+
 }
+
+export default new Register();

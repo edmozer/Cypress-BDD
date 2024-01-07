@@ -1,24 +1,30 @@
-export default {
-        accessLoginPage() {
-          cy.visit("https://seubarriga.wcaquino.me/login");
-        },
-      
-        setEmail(email) {
-    
-          return cy.get('#email').type(email);
-        },
-      
-        setPassword(password) {
-          
-          return cy.get('#senha').type(password);
-        },
+/// <reference types="cypress" />
+var el = require('../elements/loginElements').LOGIN
+const { set, click } = require('../actions.js');
 
-        clickLoginButton() {
-            cy.get('.btn').click();
-        },
+class Login {
 
-        getAlertMessage(message) {
-            cy.get('.alert').contains(message);
-        }
-      };
+  accessLoginPage() {
+    cy.visit(el.url);
+  }
+
+  setEmail(email) {
+    email && set(el.fieldEmail, email);
+  }
+
+  setPassword(password) {
+    password && set(el.fieldPassword, password);
+  }
+
+  clickLoginButton() {
+    click(el.btnLogin);
+  }
+
+  getAlertMessage() {
+    return cy.get(el.alertMessage)
+  }
+
+}
+
+export default new Login();
       
