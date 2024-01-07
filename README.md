@@ -1,6 +1,6 @@
-# FRONT-END AUTOMATION - YOUR BELLY
+# FRONT-END AUTOMATION - SEU BARRIGA
 
-**CYPRESS PROJECT AUTOMATION OF YOUR BARRIGA WEBSITE**
+**CYPRESS PROJECT AUTOMATION OF SEU BARRIGA WEBSITE**
 
 ## Environment Installation
 * Install the IDE you want, Visual Studio Code recommended, where the executions will be carried out
