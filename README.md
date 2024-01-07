@@ -9,7 +9,7 @@
 
 * Java with version 11.0.20
 
-## * Clone the project
+## * First clone the project
 
 ## Command to install project dependencies and plugins:
 ```sh default
