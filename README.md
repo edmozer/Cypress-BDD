@@ -1,6 +1,6 @@
-# FRONT-END AUTOMATION - YOUR BELLY
+# FRONT-END AUTOMATION - SEU BARRIGA
 
-**CYPRESS PROJECT AUTOMATION OF YOUR BARRIGA WEBSITE**
+**CYPRESS PROJECT AUTOMATION OF SEU BARRIGA WEBSITE**
 
 ## Environment Installation
 * Install the IDE you want, Visual Studio Code recommended, where the executions will be carried out
@@ -9,7 +9,9 @@
 
 * Java with version 11.0.20
 
-## * Clone the project
+* Cypress with version 13.6.2
+
+## * First clone the project
 
 ## Command to install project dependencies and plugins:
 ```sh default
