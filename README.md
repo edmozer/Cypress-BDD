@@ -9,6 +9,8 @@
 
 * Java with version 11.0.20
 
+* Cypress with version 13.6.2
+
 ## * First clone the project
 
 ## Command to install project dependencies and plugins:
