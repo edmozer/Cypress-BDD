@@ -1,4 +1,4 @@
-# FRONT-END AUTOMATION - SEU BARRIGA
+# FRONT-END AUTOMATION - SEU BARRIGA(MR. BARRIGA)
 
 **CYPRESS PROJECT AUTOMATION OF SEU BARRIGA WEBSITE**
 
@@ -36,6 +36,10 @@
 **or**
 ```sh default
 * npx cypress
+```
+## Command to run the project for Tags
+```sh default
+* yarn cypress run --env tags=@YourTag
 ```
 
 # Cypress Project Structure
