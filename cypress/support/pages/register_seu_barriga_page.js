@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 let el = require('../elements/registerElements').REGISTER
-const { set, click, get_text } = require('../actions.js');
+const { set, click,  } = require('../actions');
 
 
 class Register {

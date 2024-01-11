@@ -37,6 +37,10 @@
 ```sh default
 * npx cypress
 ```
+## Command to run the project for Tags
+```sh default
+* yarn cypress run --env tags=@YourTag
+```
 
 # Cypress Project Structure
 
