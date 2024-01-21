@@ -1,7 +1,7 @@
 function waitElement(el) {
     try {
         cy.log('Aguardando o elemento ' + el + 'está visível')
-        cy.get(el, {timeout: 10000} )
+        cy.get(el).and('be.visible')
         cy.log('Encontrou o elemento ' + el)
     } catch (error) {
         cy.log('Exceção capturada: ' + error.message);
